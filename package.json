@@ -1,0 +1,43 @@
+{
+  "name": "graphql-server-typescript",
+  "version": "1.0.0",
+  "description": "GraphQL + MongoDB express server with JWT authorization (in Typescript!)",
+  "author": "Thomas Gazzoni",
+  "scripts": {
+    "lint": "tslint --project '.'",
+    "start": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' src/server.ts dist/server.js",
+    "compile": "tsc",
+    "build": "npm run compile && node dist/server.js"
+  },
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.1",
+    "cors": "^2.8.0",
+    "errorhandler": "^1.5.0",
+    "express": "^4.14.0",
+    "express-graphql": "^0.6.11",
+    "graphql": "^0.11.2",
+    "graphql-subscriptions": "^0.5.0",
+    "mongoose": "^4.11.9",
+    "morgan": "^1.8.2",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.2.1"
+  },
+  "devDependencies": {
+    "@types/express-graphql": "0.0.33",
+    "@types/mongodb": "^2.2.2",
+    "@types/mongoose": "^4.7.11",
+    "@types/node": "^7.0.18",
+    "@types/passport": "^0.3.3",
+    "@types/passport-jwt": "^2.0.19",
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2",
+    "mocha-typescript": "^1.1.8",
+    "nodemon": "^1.9.1",
+    "ts-node": "^3.0.4",
+    "tslint": "^5.2.0",
+    "typescript": "^2.3.2"
+  }
+}
